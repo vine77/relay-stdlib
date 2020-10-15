@@ -1,0 +1,20 @@
+apiVersion: integration/v1
+kind: Integration
+name: stdlib
+channel: stable
+version: v20201014
+summary: Standard Library
+license: Apache-2.0
+homepage: https://github.com/relay-integrations/relay-stdlib
+source: https://github.com/relay-integrations/relay-stdlib
+
+description: |
+  This integration provides a set of useful utility triggers and steps that can
+  make it much easier to implement custom workflow functionality.
+
+owner:
+  name: Puppet, Inc.
+  email: relay@puppet.com
+  url: https://puppet.com
+
+tags: []
