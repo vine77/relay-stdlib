@@ -1,0 +1,19 @@
+apiVersion: integration/v1
+kind: Step
+name: jq
+version: 1
+summary: Run jq
+description: |
+  This step applies a jq filter to some arbitrary input data.
+build:
+  apiVersion: build/v1
+  kind: Docker
+publish:
+  repository: relaysh/stdlib-step-jq
+schemas:
+  spec:
+    source: file
+    file: spec.schema.json
+  outputs:
+    source: file
+    file: outputs.schema.json
