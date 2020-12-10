@@ -2,10 +2,10 @@ apiVersion: integration/v1
 kind: Trigger
 name: json
 version: 1
-summary: Pass through JSON data
+summary: Receive a webhook
 description: |
-  This trigger passes through a JSON object sent as an HTTP request body as a
-  Relay event.
+  This trigger receives a generic webhook and passes through a JSON object 
+  sent as an HTTP request body as Relay event.
 
 responders:
 - webhook
@@ -17,11 +17,11 @@ schemas:
     type: object
 
 examples:
-- summary: Pass arbitrary data through to a Relay workflow
+- summary: Receive a webhook
   content:
     apiVersion: v1
     kind: Trigger
-    name: pagerduty-incident
+    name: generic-webhook
     source:
       type: webhook
       image: relaysh/stdlib-trigger-json
