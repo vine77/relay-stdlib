@@ -12,7 +12,7 @@ logging.getLogger().setLevel(logging.INFO)
 @app.route('/', methods=['POST'])
 async def handler():
     r = await request.get_json(force=True)
-    logging.info("Received the following payload: \n%s", pformat(r))
+    logging.info("Received the following webhook payload: \n%s", pformat(r))
     relay.events.emit(r)
     return {}, 202, {}
 
