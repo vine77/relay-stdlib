@@ -1,0 +1,16 @@
+apiVersion: integration/v1
+kind: Step
+name: echo
+version: 1
+summary: Echo a message
+description: |
+  This step echoes a message that is provided as a paremeter
+build:
+  apiVersion: build/v1
+  kind: Docker
+publish:
+  repository: relaysh/stdlib-step-echo
+schemas:
+  spec:
+    source: file
+    file: spec.schema.json
